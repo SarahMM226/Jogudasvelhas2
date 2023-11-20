@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Jogo das Velhas</title>
+        <style>
+            td {
+                background: green;
+                color:white;
+                height: 100px;
+                width: 100px;
+                text-align: center;
+                font-size: 80px;
+            }
+            td:hover {
+                background: url(https://m.media-amazon.com/images/M/MV5BZDE2ZjIxYzUtZTJjYS00OWQ0LTk2NGEtMDliYmI3MzMwYjhkXkEyXkFqcGdeQWFsZWxvZw@@._V1_.jpg);
+                background-size: cover;
+                color:white;
+                flex-direction: column;
+                cursor:pointer;
+            }
+            h1 {
+                background: red;
+            }
+            body {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: lightgreen;
+                }
+            table {
+                width: fit-content;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>1ª versao jogo das velhas :)</h1>
+        <table>
+            <tr>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+            </tr>
+            <tr>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+            </tr>
+            <tr>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+                <td onclick="mark (this)"></td>
+            </tr>
+        </table>
+        <script>
+            let player = "X"
+            function mark (td) {
+                if (td.innerHTML) return
+                td.innerHTML = player
+                player = (player == "X" ? "O" : "X")
+            }
+        </script>
+    </body>
+</html>
